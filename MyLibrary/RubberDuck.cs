@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace MyLibrary
 {
-    public class MallardDuck : Duck, IFlyable, IQuackable
+    public class RubberDuck : Duck, IQuackable
     {
         public override string Display()
         {
@@ -15,10 +15,6 @@ namespace MyLibrary
         public string quack()
         {
             return "Quack" + this.GetType();
-        }
-        public string fly()
-        {
-            return "Fly" + this.GetType();
         }
     }
 }

@@ -8,13 +8,9 @@ namespace MyLibrary
 {
     public abstract class Duck
     {
-        public string Quack()
-        {
-            return "Quack!" + " " + this.GetType();
-        }
         public string Swim()
         {
-            return "Swim" + " " + this.GetType();
+            return "swim" + "" + GetType();
         }
         public abstract string Display();
     }
