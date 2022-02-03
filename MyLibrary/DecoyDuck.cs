@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace MyLibrary
 {
     public class DecoyDuck : Duck
     {
-        public override string Display()
+        public DecoyDuck()
         {
-            return "Display" + this.GetType();
+            flyBehavior = new FlyNoWay();
+            quackBehavior = new MuteQuack();
         }
     }
 }

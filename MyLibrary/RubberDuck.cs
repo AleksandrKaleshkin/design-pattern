@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace MyLibrary
 {
-    public class RubberDuck : Duck, IQuackable
+    public class RubberDuck : Duck
     {
-        public override string Display()
+        public RubberDuck()
         {
-            return "Display" + this.GetType();
+            flyBehavior = new FlyNoWay();
+            quackBehavior = new Squeak();
         }
-        public string quack()
-        {
-            return "Quack" + this.GetType();
-        }
+
     }
 }
